@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
   def hello
-    Pusher['peter_channel'].trigger('peter_event', {
-      message: 'hello peter'
-    })
+    Pusher.trigger('peter_channel', 'peter_event', {message: 'heee'})
   end
 end
