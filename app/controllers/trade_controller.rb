@@ -3,7 +3,7 @@ class TradeController < ApplicationController
   end
 
   def create
-    Pusher.trigger('price_channel', 'update', {message: params[:price]})
+    Pusher.trigger('price_channel', 'update', {price: params[:price]})
     redirect_to :root
   end
 end
