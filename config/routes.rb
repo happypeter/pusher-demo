@@ -1,5 +1,6 @@
 PusherDemo::Application.routes.draw do
   root 'trade#new'
+  post "/trade" => "trade#create"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
