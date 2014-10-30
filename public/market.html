@@ -19,7 +19,7 @@
     var pusher = new Pusher('d2c10aba8ee2d9de4da5');
     var channel = pusher.subscribe('price_channel');
     channel.bind('update', function(data) {
-      alert(data.price);
+      alert("new data from server");
       document.getElementById("price").innerHTML = data.price;
       console.log(data);
     });
