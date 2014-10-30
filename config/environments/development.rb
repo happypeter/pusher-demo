@@ -19,6 +19,12 @@ PusherDemo::Application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+  config.generators do |g|
+    g.assets false
+    g.helper false
+    g.test_framework false
+  end
+
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
